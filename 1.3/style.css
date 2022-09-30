@@ -217,7 +217,7 @@ ul{
     content: "";
     position: absolute;
     align-items: center;
-    background-image: url('images/arrow.svg');
+    background-image: url('../images/arrow.svg');
     height: 10.29px;
     width: 7.41px;
     left: -15px;
