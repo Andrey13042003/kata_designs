@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('./asset/fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes ExtraBold';
+    src: url('TTLakes-ExtraBold.eot');
+    src: local('TT Lakes ExtraBold'), local('TT Lakes ExtraBold'),
+        url('./asset/fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{
+    width: 320px;
+    height: 1024px;
+    overflow: hidden;
+    font-family: "TT Lakes";
+    background-color: #F2F2F2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #1B1C21;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+.icon{
+    align-items: center;
+    justify-content: center;
+    background-color: #ff3e79;
+    display: flex;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+.icon:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+    box-shadow: 0 0 4px 1px #ff3e79;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__list{
+    display: flex;
+    align-items: center;
+    gap: 16.73px;
+}
+
+.header__position{
+    padding: 24px;
+}
+
+.logo__size{
+    display: block;
+}
+
+.nav-position{
+    padding: 40px 0 268px 24px;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.list__lnk{
+    font-weight: 600;
+}
+
+.list__lnk:hover, .list__lnk:active{
+    color: #7E7E82;
+    white-space: nowrap;
+}
+
+.list__item{
+    width: 100%;
+}
+
+.list__item:hover::before{
+    content: "";
+    display: block;
+    height: 32px;
+    width: 4px;
+    border-radius: 0 20px 20px 0;
+    background: #41F6D7;
+    position: absolute;
+    left: 0px;
+    transition-duration: 0.2s;
+}
+
+.footer{
+    padding-left: 24px;
+}
+
+.footer__btn{
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.footer__contacts{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mail{
+    font-weight: 600;   
+}
+
+.number{
+    font-family: "TT Lakes ExtraBold";
+    font-size: 24px;
+    line-height: 62px;
+}
+
+.footer__languages{
+    display: flex;
+    gap: 7px;
+}
+
+.footer__lnk:hover{
+    color: #7E7E82;
+}
