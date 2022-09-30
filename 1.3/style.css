@@ -1,0 +1,394 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('./assets/fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes ExtraBold';
+    src: url('TTLakes-ExtraBold.eot');
+    src: local('TT Lakes ExtraBold'), local('TT Lakes ExtraBold'),
+        url('./assets/fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    font-family: "TT Lakes";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.main, .title, .nav{
+    background-color: #F8F8F8;
+}
+
+.title{
+    border-top: 1px solid #D9FFF5;
+}
+
+.nav{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__position{
+    margin: 18px 0 18px 0;
+}
+
+.header__list1{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__item{
+    display: flex;
+    align-items: center;
+}
+
+.header__list2{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__list3{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 16px;
+}
+
+button{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon{
+    display: flex;
+    gap: 8px;
+}
+
+.icon__position{
+    display: flex;
+    background-color: #ff3e79;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__list2{
+    display: none;
+}
+
+.header__btn--profile{
+    margin-right: 25px;
+}
+
+.burger::after{
+    display: block;
+    content: "";
+    position: absolute;
+    align-items: center;
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px;
+    top: 30px;
+    right: 131px;
+
+}
+
+.title{
+    position: relative;
+    font-family: 'TT Lakes ExtraBold';
+    font-size: 28px;
+    left: 16px;
+}
+
+.title::before{
+    display: block;
+    content: '';                     
+    position: absolute;
+    width: 3px;
+    height: 40px;
+    background: #41F6D7;
+    left: -16px;
+    border-radius: 0 2px 2px 0;
+}
+
+button{
+    display: flex;
+    align-items: center;
+}
+
+.nav__list{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nav{
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.nav__lnk:active,
+.nav__lnk:hover,  
+.nav__lnk {
+  color: #7E7E82;
+  font-size: 16px;
+}
+
+.nav__lnk:hover{
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    padding: 6px 15px;
+}
+
+.nav__lnk{
+    padding: 8px 17px;
+}
+
+ul{
+    padding-left: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav__list{
+    white-space: nowrap;
+}
+
+.section__text{
+    padding: 0 16px 16px 16px;
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: clip;
+    display: flex;
+    flex-wrap: wrap;
+    height: 130px;
+    gap: 20px;
+}
+
+.read-next{
+    padding-left: 60px;
+}
+
+.arrow{
+    position: relative;
+}
+
+.section__read-next{
+    margin-left: 60px;
+    padding: 16px 0 16px 0;
+    font-weight: 600;
+}
+
+.arrow__txt::before{
+    display: block;
+    content: "";
+    position: absolute;
+    align-items: center;
+    background-image: url('assets/images/arrow.svg');
+    height: 10.29px;
+    width: 7.41px;
+    left: -15px;
+    top: 20px;
+}
+
+.icon__text{  
+    display: none;
+}
+
+.section__img-size{
+    width: 320px;
+    height: 176px;
+}
+
+.main__img-form{ 
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px){
+    .container{
+        min-width: 784px;
+    }
+
+    .header__list1{
+        gap: 36px;
+    }
+
+    .header__list2{
+        display: inherit;
+    }
+
+    .logo__size{
+        display: block;
+    }
+    
+    .logo::before{
+        pointer-events: none;
+        display: block;
+        content: "";
+        position: absolute;
+        align-items: center;
+        width: 2px;
+        height: 32px;
+        background: #EAEAEA;
+        border-radius: 1px;
+        top: 30px;
+        left: 73px;
+    }
+
+    .title{
+        left: 20px;
+    }
+
+    .title::before{
+        left: -20px;
+    }
+
+    .section__text{
+        height: 176px;
+        width: 370px;
+        padding-left: 20px;
+    }
+
+    .section__img-size{
+        width: 360px;
+        height: 208px;
+        margin-left: auto;
+    }
+
+    .section{
+        display: flex;
+        gap: 36px;
+    }
+
+    .arrow__txt::before{
+        top: 20px;
+        left: -15px;
+    }
+}
+
+@media (min-width: 1120px){
+    .container{
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    .container__position{
+        margin-top: 42px;
+    }
+
+    .main, .title, .nav{
+        background-color: #FFFFFF;
+    }
+
+
+    .header__position{
+        margin: 0;
+    }
+
+    .header__list1, .header__list2{
+        display: none;
+    }
+
+    .header__list3{
+        gap: 32px;
+    }
+
+    .icon__text{  
+        content: '';
+        display: block;                 
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    
+    .title{
+        border-top: none;
+    }
+
+    .title__position{
+        position: relative;
+        display: inline-block;
+        top: -40px;
+        left: 30px;
+        white-space: nowrap;
+    }
+
+    .title::before{
+        left: -30px;
+    }
+
+    .section__text{
+        width: 490px;
+        height: 240px;
+        padding-left: 30px;
+    }
+
+    .section__read-next{
+        padding: 0;
+    }
+
+    .arrow__txt::before{
+        top: 5px;
+        left: -15px;
+    }
+
+    .section__img-size{
+        width: 531px;
+        height: 307px;
+    }
+
+    .nav__list{
+        flex-wrap: wrap;
+        gap: 15px 0;
+    }
+
+    ul{
+        padding-left: 32px;
+    }
+
+    .nav{
+        padding-top: 10px;
+    }
+
+    .nav__lnk:hover{
+        padding: 6px 19px;
+    }
+    
+    .nav__lnk{
+        padding: 8px 21px;
+    }
+}
