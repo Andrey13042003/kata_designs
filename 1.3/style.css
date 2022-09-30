@@ -2,7 +2,7 @@
     font-family: 'TT Lakes';
     src: url('TTLakes-Regular.eot');
     src: local('TT Lakes Regular'), local('TTLakes-Regular'),
-        url('./assets/fonts/TTLakes-Regular.woff') format('woff');
+        url('../fonts/TTLakes-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@
     font-family: 'TT Lakes ExtraBold';
     src: url('TTLakes-ExtraBold.eot');
     src: local('TT Lakes ExtraBold'), local('TT Lakes ExtraBold'),
-        url('./assets/fonts/TTLakes-Bold.woff') format('woff');
+        url('..fonts/TTLakes-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -217,7 +217,7 @@ ul{
     content: "";
     position: absolute;
     align-items: center;
-    background-image: url('assets/images/arrow.svg');
+    background-image: url('images/arrow.svg');
     height: 10.29px;
     width: 7.41px;
     left: -15px;
