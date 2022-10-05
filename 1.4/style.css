@@ -44,6 +44,24 @@
     box-sizing: inherit;
 }
 
+.first-half{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.header__list{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .icon{
     align-items: center;
     justify-content: center;
@@ -59,22 +77,6 @@
     cursor: pointer;
     transition-duration: 0.2s;
     box-shadow: 0 0 4px 1px #ff3e79;
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__list{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.header__position{
-    padding-bottom: 50px;
 }
 
 .logo{
