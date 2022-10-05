@@ -8,44 +8,57 @@
     <title>Макет №2</title>
 </head>
 <body>
-    <div class="container"> 
-        <header class="header header__position">
-            <ul class="header__list">
-                <li><button class="icon"><img src="../images/cross.svg" alt="Close the menu"></button></li>
-                <a href="#"><img src="../images/Group.svg" class="logo__size" alt="GPS Company History"></a>
-            </ul>
-            <ul>
-                <li><button class="icon"><img src="../images/search.svg" alt="Search the information"></button></li>
-            </ul>
-        </header>
-        <nav class="nav-position">
-            <ul class="list list__position">
-                <li class="list__item"><a href="#" class="list__lnk">Ремонт техники</a></li>
-                <li class="list__item"><a href="#" class="list__lnk">Услуги и сервисы</a></li>
-                <li class="list__item"><a href="#" class="list__lnk">Корпоративным клиентам</a></li>
-                <li class="list__item"><a href="#" class="list__lnk">Продавцам техники</a></li>
-                <li class="list__item"><a href="#" class="list__lnk">Партнерам</a></li>
-                <li class="list__item"><a href="#" class="list__lnk">Производителям</a></li>
-                <li class="list__item"><a href="#" class="list__lnk">Наши сервисные центры</a></li>
-                <li class="list__item"><a href="#" class="list__lnk">Контакты</a></li>
-            </ul>
-        </nav>
-        <footer class="footer">
-            <ul class="footer__btn">
-                <li><button class="icon"><img src="../images/call.svg" alt="Contact us"></button></li>
-                <li><button class="icon"><img src="../images/chat.svg" alt="Chat with technical support"></button></li>
-                <li><button class="icon"><img src="../images/profile.svg" alt="Profile"></button></li>
-            </ul>
-            <div class="footer__contacts">
-                <span><a href="mailto:mail@cps.com" class="mail">mail@cps.com</a></span>
-                <span><a href="tel:+78008908900" class="number">8 800 890 8900</a></span>
+    <aside class="container"> 
+        <div class="menu">
+            <div>
+                <div class="header header__position">
+                    <ul class="header__list">
+                        <li><button class="icon"><img src="../images/cross.svg" alt="Close the menu"></button></li>
+                        <a href="#"><img src="../images/Group.svg" class="logo__size" alt="GPS Company History"></a>
+                    </ul>
+                    <button class="icon"><img src="../images/search.svg" alt="Search the information"></button>
+                </div>
+                <nav>
+                    <ul class="list">
+                        <li class="list__item"><a href="#" class="list__lnk">Ремонт техники</a></li>
+                        <li class="list__item"><a href="#" class="list__lnk">Услуги и сервисы</a></li>
+                        <li class="list__item"><a href="#" class="list__lnk">Корпоративным клиентам</a></li>
+                        <li class="list__item"><a href="#" class="list__lnk">Продавцам техники</a></li>
+                        <li class="list__item"><a href="#" class="list__lnk">Партнерам</a></li>
+                        <li class="list__item"><a href="#" class="list__lnk">Производителям</a></li>
+                        <li class="list__item"><a href="#" class="list__lnk">Наши сервисные центры</a></li>
+                        <li class="list__item"><a href="#" class="list__lnk">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
-            <ul class="footer__languages">
-                <li><a href="#" class="footer__lnk">RU</a></li>
-                <li><a href="#" class="footer__lnk">EN</a></li>
-                <li><a href="#" class="footer__lnk">CH</a></li>
-            </ul>
-        </footer>
-    </div>
+            <div class="footer">
+                <div>
+                    <ul class="footer__btn">
+                        <li><button class="icon"><img src="../images/call.svg" alt="Contact us"></button></li>
+                        <li><button class="icon"><img src="../images/chat.svg" alt="Chat with technical support"></button></li>
+                        <li><button class="icon"><img src="../images/profile.svg" alt="Profile"></button></li>
+                    </ul>
+                    <div class="footer__contacts">
+                        <a href="mailto:mail@cps.com" class="mail">mail@cps.com</a>
+                        <a href="tel:+78008908900" class="number">8 800 890 8900</a>
+                    </div>
+                </div>
+                <form class="lang">
+                    <label class="lang__label">
+                        RU
+                        <input type="radio" value="1" name="ru_lang">
+                    </label>
+                    <label class="lang__label">
+                        EN
+                        <input type="radio" value="2" name="en_lang">
+                    </label>                
+                    <label class="lang__label">
+                        CH
+                        <input type="radio" value="3" name="ch_lang">
+                    </label>
+                </form>
+            </div>
+        </div>
+    </aside>
 </body>
 </html>
