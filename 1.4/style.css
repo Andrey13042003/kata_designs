@@ -30,21 +30,22 @@
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    justify-content: space-between;
     align-content: space-between;
 }
 
 *{
     margin: 0;
     padding: 0;
-    list-style-type: none;
-    text-decoration: none;
     box-sizing: border-box;
     color: #1B1C21;
 }
 
-*, *::after, *::before{
-    box-sizing: inherit;
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .first-half{
@@ -54,9 +55,7 @@
 }
 
 .header{
-    display: flex;
-    align-items: center;
-    gap: 80px;
+    width: 100%;
 }
 
 .header__list{
@@ -80,6 +79,10 @@
     cursor: pointer;
     transition-duration: 0.2s;
     box-shadow: 0 0 4px 1px #ff3e79;
+}
+
+.grow{
+    flex-grow: 1;
 }
 
 .logo{
@@ -124,7 +127,7 @@
 .footer{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
 }
 
 .footer__btn{
@@ -159,5 +162,6 @@
 }
 
 input[type=radio]{
-    display: none;
+    width: 0;
+    height: 0;
 }
