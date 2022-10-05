@@ -77,9 +77,10 @@
     padding-bottom: 50px;
 }
 
-.logo__size{
+.logo{
     width: 98px;
     height: 52px;
+    display: block;
 }
 
 .list{
