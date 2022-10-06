@@ -16,7 +16,7 @@
     font-style: normal;
 }
 
-.container{
+.aside{
     width: 320px;
     height: 100vh;
     overflow: hidden;
@@ -25,10 +25,10 @@
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
 
-.menu{
+.aside__menu{
     padding: 18px 24px 32px 24px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: 100vh;
     align-content: space-between;
 }
@@ -48,17 +48,17 @@ ul{
     list-style-type: none;
 }
 
-.first-half{
+.aside__wrapper{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 50px;
 }
 
-.header{
+.aside__header{
     width: 100%;
 }
 
-.header__list{
+.aside__list{
     display: flex;
     align-items: center;
     gap: 16px;
@@ -93,7 +93,7 @@ ul{
 
 .list{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 32px;
 }
 
@@ -124,26 +124,32 @@ ul{
     transition-duration: 0.2s;
 }
 
-.footer{
+.aside__bottom{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
 }
 
-.footer__btn{
+.aside__btn{
     display: flex;
     justify-content: flex-start;
     gap: 16px;
     padding-bottom: 16px;
 }
 
-.footer__contacts{
+.aside__direction{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .mail{
-    font-weight: 600;   
+    font-weight: 600; 
+}
+
+.mail:hover, .number:hover, .lang__label:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+    color: #7E7E82;
 }
 
 .number{
@@ -155,10 +161,6 @@ ul{
 .lang{
     display: flex;
     gap: 7px;
-}
-
-.lang__label:hover{
-    color: #7E7E82;
 }
 
 input[type=radio]{
