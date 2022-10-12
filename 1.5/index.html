@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Макет №3</title>
+</head>
+<body>
+    <div class="container-position">
+        <h1 class="title title__position">Ремонт техники различных брендов</h1>
+        <div class="swiper-container" data-mobile = "false">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/Lenovo.png" class="image-slider__image" alt="Lenovo">
+                    <a href="#" class="link"></a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/Samsung.png" class="image-slider__image" alt="Samsung">
+                    <a href="#" class="link"></a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/Apple.png" class="image-slider__image" alt="Apple">
+                    <a href="#" class="link"></a>
+                </div>
+                <div class="swiper-slide swiper-wrapper__display">
+                    <img src="./images/ViewSonic.png" class="image-slider__image" alt="ViewSonic">
+                    <a href="#" class="link"></a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/Bosch.png" class="image-slider__image" alt="Bosch">
+                    <a href="#" class="link"></a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/Hp.png" class="image-slider__image" alt="Hp">
+                    <a href="#" class="link"></a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/Acer.png" class="image-slider__image" alt="Acer">
+                    <a href="#" class="link"></a>
+                </div>
+                <div class="swiper-slide swiper-wrapper__display">
+                    <img src="./images/Sony.png" class="image-slider__image" alt="Sony">
+                    <a href="#" class="link"></a>
+                </div>
+                <!--Скрытые элементы начало-->
+                <div id="myDiv">
+                    <div class="swiper-flow">
+                        <div class="swiper-slide">
+                            <img src="./images/Lenovo.png" class="image-slider__image" alt="Lenovo">
+                            <a href="#" class="link"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/Samsung.png" class="image-slider__image" alt="Samsung">
+                            <a href="#" class="link"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/Apple.png" class="image-slider__image" alt="Apple">
+                            <a href="#" class="link"></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Конец-->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <button class="arrow arrow__position" onclick="myFunction()">
+            <div class="arrow__txt">
+                <span id="span">Показать все</span>
+            </div>
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
