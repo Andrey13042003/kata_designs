@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('../fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes ExtraBold';
+    src: url('TTLakes-ExtraBold.eot');
+    src: local('TT Lakes ExtraBold'), local('TT Lakes ExtraBold'),
+        url('../fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-position{
+    padding-left: 16px;
+}
+
+.title{
+    color: #7E7E82;
+    font-family: "TT Lakes";
+}
+
+.title__position{
+    padding: 16px 16px 32px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.swiper-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-basis: 224px;
+    width: 240px;
+    height: 72px;
+}
+
+.swiper-flow{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+.image-slider__image{
+    padding: 20px 16px 20px 16px;
+}
+
+.swiper-wrapper__display{
+    display: none;
+}
+
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #B5B6BC;
+}
+
+.link{
+    position: relative;
+    padding: 16px;
+}
+
+.link::after{
+    display: block;
+    content: "";
+    width: 40px;
+    height: 40px;
+    color: #FF3E79;
+    border: 2px solid #FF3E79;
+    background: url('/images/dropdown.svg') center no-repeat ;
+    border-radius: 50%;
+}
+
+.arrow{
+    display: none;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    font-family: "TT Lakes";
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.arrow::before{
+    display: block;
+    content: "";
+    position: absolute;
+    align-items: center;
+    background-image: url(./images/arrow.svg);
+    height: 10.29px;
+    width: 7.41px;
+    top: 28px;
+}
+
+.arrow__position{
+    padding-top: 24px;
+}
+
+.arrow__txt{
+    margin-left: 20px
+}
+
+#myDiv{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .container-position{
+        padding-left: 24px;
+    }
+
+    .title__position{
+        padding-left: 0;
+    }
+
+    .swiper-wrapper{
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+
+    .swiper-slide{
+        width: 224px;
+        height: 72px;
+    }
+
+    .arrow{
+        display: inherit;
+    }
+}
+
+@media (min-width: 1120px) {
+    .swiper-wrapper__display{
+        display: inherit;
+    }
+
+    #myDiv{
+        display: inherit;
+        width: 100%;
+    }
+}
