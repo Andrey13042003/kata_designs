@@ -1,4 +1,4 @@
-const slider = document.querySelector('.swiper-container');
+const slider = document.querySelector('#swiper-container');
 
 let mySwiper;
 
@@ -25,22 +25,23 @@ function mobileSlider() {
     }
 }
 
-function myFunction() {
-    var x = document.getElementById('myDiv');
-    var y = document.getElementById('span');
-    x.style.transition = '3s';
-    if(x.style.display === 'none') {
-        x.style.display = 'block';
-        y.innerHTML = "Скрыть";
+document.querySelector('button').addEventListener('click', function(){
+    let x = document.getElementById('span');
+    let arrow = document.getElementById('arrow');
+    if (x.textContent === "Показать все") {
+        document.getElementById('swiper-container').classList.remove('hidden');
+        x.innerHTML = "Скрыть";
+        arrow.classList.toggle('arrow');
     }
+
     else {
-        x.style.display = 'none';
-        y.innerHTML = "Показать все";
+        document.getElementById('swiper-container').classList.add('hidden');
+        x.innerHTML = "Показать все";
+        arrow.classList.toggle('arrow');
     }
-}
+  });
 
 mobileSlider();
-myFunction();
 
 window.addEventListener('resize', () => {
     mobileSlider();
