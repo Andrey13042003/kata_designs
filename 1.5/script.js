@@ -29,13 +29,13 @@ document.querySelector('button').addEventListener('click', function(){
     let x = document.getElementById('span');
     let arrow = document.getElementById('arrow');
     if (x.textContent === "Показать все") {
-        document.getElementById('swiper-container').classList.remove('hidden');
+        document.getElementById('swiper-container').classList.add('height');
         x.innerHTML = "Скрыть";
         arrow.classList.toggle('arrow');
     }
 
     else {
-        document.getElementById('swiper-container').classList.add('hidden');
+        document.getElementById('swiper-container').classList.remove('height');
         x.innerHTML = "Показать все";
         arrow.classList.toggle('arrow');
     }
