@@ -28,6 +28,7 @@
 #swiper-container{
     width: 100%;
     overflow: hidden;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .section{
@@ -47,7 +48,6 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 16px;
-    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .swiper-slide{
@@ -98,7 +98,7 @@
     height: 40px;
     color: #FF3E79;
     border: 2px solid #FF3E79;
-    background: url('./images/dropdown.svg') center no-repeat ;
+    background: url('/images/dropdown.svg') center no-repeat ;
     border-radius: 50%;
 }
 
@@ -143,8 +143,12 @@
     }
 
     .hidden{
-        height: 160px;
+        max-height: 160px;
         overflow: hidden;
+    }
+
+    .height{
+        max-height: 336px;
     }
 
     .swiper-wrapper{
@@ -164,5 +168,9 @@
 @media (min-width: 1120px) {
     .swiper-wrapper__display{
         display: inherit;
+    }
+
+    .height{
+        max-height: 248px;
     }
 }
