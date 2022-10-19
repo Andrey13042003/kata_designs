@@ -1,48 +1,52 @@
-const slider = document.querySelector('#swiper-container');
+const slider = document.querySelector('.section__container');
 
 let mySwiper;
 
 function mobileSlider() {
-    if(window.screen.width < 768 && slider.dataset.mobile == 'false') {
-        mySwiper = new Swiper(slider, {
-            observer: true,
-            observeParents: true,
-            slidesPerView: "auto",
-            pagination: {
-                el: '.swiper-pagination', 
-                clickable: true,
-            },
-        });
-        slider.dataset.mobile = 'true';
-    }
 
-    if(window.screen.width >= 768) {
-        slider.dataset.mobile = 'false';
+    mySwiper = new Swiper(slider, {
 
-        if(slider.classList.contains('swiper-container-initialized')) {
-            mySwiper.destroy();
-        }
-    }
+    observer: true,
+    slideClass: 'section__slide',
+    observeParents: true,
+    slidesPerView: "auto",
+    watchOverflow: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.swiper-pagination', 
+        clickable: true,
+    },
+    });
+    slider.dataset.mobile = 'true';
 }
 
 document.querySelector('button').addEventListener('click', function(){
-    let x = document.getElementById('span');
-    let arrow = document.getElementById('arrow');
+    let x = document.querySelector('.span');
+    let arrow = document.querySelector('.arrow');
     if (x.textContent === "Показать все") {
-        document.getElementById('swiper-container').classList.add('height');
+        document.querySelector('.section__container').classList.add('height');
         x.innerHTML = "Скрыть";
-        arrow.classList.toggle('arrow');
+        arrow.classList.toggle('arrows');
     }
 
     else {
-        document.getElementById('swiper-container').classList.remove('height');
+        document.querySelector('.section__container').classList.remove('height');
         x.innerHTML = "Показать все";
-        arrow.classList.toggle('arrow');
+        arrow.classList.toggle('arrows');
     }
   });
 
 mobileSlider();
 
 window.addEventListener('resize', () => {
-    mobileSlider();
+    if(window.screen.width < 768 && slider.dataset.mobile == 'false') {
+        mobileSlider();
+    }
+    if(window.screen.width >= 768) {
+        slider.dataset.mobile = 'false';
+
+        if(slider.classList.contains('swiper-initialized')) {
+            mySwiper.destroy();
+        }
+    }
 });
