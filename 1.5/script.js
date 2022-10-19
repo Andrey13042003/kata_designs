@@ -4,7 +4,7 @@ let mySwiper;
 
 function mobileSlider() {
 
-    mySwiper = new Swiper(slider, {
+    mySwiper = new Swiper('.swiper', {
 
     observer: true,
     slideClass: 'section__slide',
