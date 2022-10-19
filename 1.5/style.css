@@ -19,13 +19,19 @@
 *{
     margin: 0;
     padding: 0;
-    list-style-type: none;
-    cursor: pointer;
     border: none;
     box-sizing: border-box;
 }
 
-#swiper-container{
+a, button {
+    cursor: pointer;
+}
+
+ul > li{
+    list-style-type: none;
+}
+
+.section__container{
     width: 100%;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
@@ -44,13 +50,13 @@
     font-size: 16px;
 }
 
-.swiper-wrapper{
+.section__wrapper{
     display: flex;
     flex-wrap: nowrap;
     gap: 16px;
 }
 
-.swiper-slide{
+.section__slide{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,19 +67,12 @@
     flex-basis: 224px;
 }
 
-.swiper-slide__link{
+.section__link{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-basis: 224px;
-}
-
-.image-slider__image{
-    padding: 20px 16px 20px 16px;
-}
-
-.swiper-wrapper__display{
-    display: none;
+    padding: 16px;
 }
 
 .swiper-pagination{
@@ -84,11 +83,6 @@
     width: 12px;
     height: 12px;
     background-color: #B5B6BC;
-}
-
-.link{
-    position: relative;
-    padding: 16px 16px 16px 0;
 }
 
 .link::after{
@@ -102,7 +96,7 @@
     border-radius: 50%;
 }
 
-#arrow{
+.arrow{
     display: none;
     position: relative;
     background-color: transparent;
@@ -110,26 +104,26 @@
     font-weight: 600;
 }
 
-#arrow::before{
+.arrow::before{
     display: block;
-    content: "";
+    content: url("./images/arrow.svg");
     position: absolute;
     align-items: center;
-    background-image: url(./images/arrow.svg);
     height: 10.29px;
     width: 7.41px;
-    top: 28px;
+    top: 25px;
 }
 
-#arrow.arrow::before{
+.arrows.arrow::before{
     transform: rotate(180deg);
+    top: 31px;
 }
 
-.arrow__position{
+.section__btn{
     padding-top: 24px;
 }
 
-.arrow__txt{
+.section__txt{
     margin-left: 20px
 }
 
@@ -151,25 +145,17 @@
         max-height: 336px;
     }
 
-    .swiper-wrapper{
+    .section__wrapper{
         flex-wrap: wrap;
         padding-left: 0;
     }
 
-    #arrow{
-        display: inherit;
-    }
-
-    .swiper-wrapper__display{
+    .arrow{
         display: inherit;
     }
 }
 
 @media (min-width: 1120px) {
-    .swiper-wrapper__display{
-        display: inherit;
-    }
-
     .height{
         max-height: 248px;
     }
