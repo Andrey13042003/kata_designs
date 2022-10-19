@@ -92,7 +92,7 @@ ul > li{
     height: 40px;
     color: #FF3E79;
     border: 2px solid #FF3E79;
-    background: url('./images/dropdown.svg') center no-repeat ;
+    background: url('/images/dropdown.svg') center no-repeat ;
     border-radius: 50%;
 }
 
