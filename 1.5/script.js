@@ -1,4 +1,4 @@
-const slider = document.querySelector('.section__container');
+const slider = document.querySelector('.swiper');
 
 let mySwiper;
 
@@ -7,7 +7,7 @@ function mobileSlider() {
     mySwiper = new Swiper('.swiper', {
 
     observer: true,
-    slideClass: 'section__slide',
+    slideClass: 'swiper__slide',
     observeParents: true,
     slidesPerView: "auto",
     watchOverflow: true,
@@ -20,21 +20,19 @@ function mobileSlider() {
     slider.dataset.mobile = 'true';
 }
 
-document.querySelector('button').addEventListener('click', function(){
-    let x = document.querySelector('.span');
-    let arrow = document.querySelector('.arrow');
-    if (x.textContent === "Показать все") {
-        document.querySelector('.section__container').classList.add('height');
-        x.innerHTML = "Скрыть";
-        arrow.classList.toggle('arrows');
+const btn = document.querySelector('.section__btn');
+const list = document.querySelector('.swiper__list');
+const span = document.querySelector('.span')
+btn.addEventListener('click', function(e) {
+    btn.classList.toggle('arrows');
+    list.classList.toggle('swiper__list--active');
+    if (list.classList.contains('swiper__list--active')) {
+        span.textContent = 'Скрыть';
     }
-
     else {
-        document.querySelector('.section__container').classList.remove('height');
-        x.innerHTML = "Показать все";
-        arrow.classList.toggle('arrows');
+        span.textContent = 'Показать все';
     }
-  });
+})
 
 mobileSlider();
 
