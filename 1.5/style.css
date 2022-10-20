@@ -57,7 +57,11 @@ ul > li{
     font-size: 16px;
 }
 
-.swiper__list{
+.swiper__height {
+    height: 150px;
+}
+
+.swiper-wrapper{
     display: flex;
     flex-wrap: nowrap;
     gap: 16px;
@@ -65,7 +69,7 @@ ul > li{
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.swiper__slide{
+.swiper-slide{
     border: 1px solid #EAEAEA;
     border-radius: 6px;
     height: 72px;
@@ -86,7 +90,7 @@ ul > li{
 }
 
 .swiper-pagination{
-    top: 195px;
+    top: 100px;
 }
 
 .swiper-pagination-bullet{
@@ -142,11 +146,15 @@ ul > li{
         padding-left: 0;
     }
 
-    .swiper__list--active{
+    .swiper-wrapper--active{
         max-height: 336px;
     }
 
-    .swiper__list{
+    .swiper__height{
+        height: auto;
+    }
+
+    .swiper-wrapper{
         overflow: hidden;
         flex-wrap: wrap;
         padding-left: 0;
@@ -161,7 +169,7 @@ ul > li{
     .section {
         width: 1120px;
     }
-    .swiper__list--active{
+    .swiper-wrapper--active{
         max-height: 248px;
     }
 }
