@@ -1,0 +1,155 @@
+a, button {
+    cursor: pointer;
+}
+
+button{
+    background-color: transparent;
+}
+
+.swiper{
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-2{
+    padding-left: 16px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-title{
+    color: #7E7E82;
+    font-family: "TT Lakes";
+    padding: 30px 16px 30px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.swiper__height {
+    height: 150px;
+}
+
+.swiper-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    max-height: 160px;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.swiper-slide{
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    height: 72px;
+    width: 224px;
+    flex-basis: 224px;
+}
+
+.swiper__link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 224px;
+    padding: 16px;
+}
+
+.swiper__link:hover{
+    background-color: #F2F2F2;
+}
+
+.swiper-pagination{
+    top: 100px;
+}
+
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #B5B6BC;
+}
+
+.link::after{
+    display: block;
+    content: "";
+    width: 40px;
+    height: 40px;
+    color: #FF3E79;
+    border: 2px solid #FF3E79;
+    background: url('../assets/img/dropdown.svg') center no-repeat ;
+    border-radius: 50%;
+}
+
+.section__btn{
+    display: none;
+    position: relative;
+}
+
+.section__btn::before{
+    display: block;
+    content: url("../assets/img/arrow.svg");
+    position: absolute;
+    align-items: center;
+    height: 10.29px;
+    width: 7.41px;
+    top: 3px;
+}
+
+.arrows.section__btn::before{
+    transform: rotate(180deg);
+    top: 5px;
+}
+
+.section__btn--text{
+    padding-left: 20px;
+    font-family: "TT Lakes";
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .section-2{
+        width: 768px;
+        padding-left: 20px;
+    }
+
+    .section-title {
+      padding: 40px 16px 40px 0;
+    }
+
+    .title__position{
+        padding-left: 0;
+    }
+
+    .swiper-wrapper--active{
+        max-height: 336px;
+    }
+
+    .swiper__height{
+        height: auto;
+    }
+
+    .swiper-wrapper{
+        overflow: hidden;
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+
+    .section__btn{
+        display: inherit;
+    }
+}
+
+@media (min-width: 1120px) {
+    .section-2{
+        width: 1120px;
+    }
+    .swiper-wrapper--active{
+        max-height: 248px;
+    }
+
+    .section-2 {
+        padding-left: 32px;
+    }
+}
+
+
