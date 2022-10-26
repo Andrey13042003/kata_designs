@@ -64,7 +64,6 @@ ul > li{
 .swiper-wrapper{
     display: flex;
     flex-wrap: nowrap;
-    gap: 16px;
     max-height: 160px;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
@@ -158,6 +157,7 @@ ul > li{
         overflow: hidden;
         flex-wrap: wrap;
         padding-left: 0;
+        gap: 16px;
     }
 
     .section__btn{
@@ -173,4 +173,3 @@ ul > li{
         max-height: 248px;
     }
 }
-
