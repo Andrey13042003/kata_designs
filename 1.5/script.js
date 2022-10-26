@@ -7,7 +7,7 @@ function mobileSlider() {
     mySwiper = new Swiper('.swiper', {
 
     observer: true,
-    slideClass: 'swiper-slide',
+    slideClass: '.swiper-slide',
     observeParents: true,
     slidesPerView: "auto",
     watchOverflow: true,
@@ -18,6 +18,11 @@ function mobileSlider() {
     });
     slider.dataset.mobile = 'true';
 }
+
+if (window.screen.width < 768) {
+  mobileSlider();
+}
+
 
 window.addEventListener('resize', () => {
     if (window.screen.width < 768 && slider.dataset.mobile == 'false') {
