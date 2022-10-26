@@ -7,9 +7,10 @@ function mobileSlider() {
     mySwiper = new Swiper('.swiper', {
 
     observer: true,
-    slideClass: '.swiper-slide',
+    slideClass: 'swiper-slide',
     observeParents: true,
     slidesPerView: "auto",
+    spaceBetween: 20,
     watchOverflow: true,
     pagination: {
         el: '.swiper-pagination', 
@@ -19,10 +20,9 @@ function mobileSlider() {
     slider.dataset.mobile = 'true';
 }
 
-if (window.screen.width < 768) {
-  mobileSlider();
+if(window.screen.width < 768) {
+    mobileSlider();
 }
-
 
 window.addEventListener('resize', () => {
     if (window.screen.width < 768 && slider.dataset.mobile == 'false') {
@@ -39,7 +39,7 @@ window.addEventListener('resize', () => {
 
 const btn = document.querySelector('.section__btn');
 const list = document.querySelector('.swiper-wrapper');
-const span = document.querySelector('.span')
+const span = document.querySelector('.span');
 btn.addEventListener('click', function(e) {
     btn.classList.toggle('arrows');
     list.classList.toggle('swiper-wrapper--active');
